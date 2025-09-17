@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yada Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="hero" id="top">
+        <nav class="nav">
+            <div class="logo">YADA</div>
+            <button class="nav-toggle" aria-label="メニューを開閉"><span aria-hidden="true">&#9776;</span></button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Works</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">Frontend Developer</span>
+                <h1>矢田 真願</h1>
+                <p>ユーザー体験を第一に、洗練されたUIと柔軟なアーキテクチャで価値あるプロダクトをつくります。</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects">作品を見る</a>
+                    <a class="btn secondary" href="#contact">連絡する</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-circle"></div>
+                <div class="hero-photo">Your Photo</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section about" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about-grid">
+                <article>
+                    <h3>経歴</h3>
+                    <p>スタートアップと受託開発での経験を通じ、BtoC向けサービスのエンジニアリングを担当。設計から実装、運用改善まで一貫して携わっています。</p>
+                </article>
+                <article>
+                    <h3>スキルセット</h3>
+                    <p>React / Next.js / Typescript / Node.js / Firebase / Figma などを活用し、スピード感のあるプロジェクト推進が得意です。</p>
+                </article>
+                <article>
+                    <h3>価値観</h3>
+                    <p>ユーザーとチームの視点を行き来し、仮説検証を繰り返すことでプロダクトの質を高めることを重視しています。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects">
+            <h2 class="section-title">Works</h2>
+            <div class="projects-grid">
+                <article class="project-card" data-project="project1">
+                    <div class="project-thumb">Project 1</div>
+                    <div class="project-body">
+                        <h3>旅先ガイドアプリ</h3>
+                        <p>旅行者向けのインタラクティブな旅先提案サービス。行動履歴を元にしたレコメンド機能を担当しました。</p>
+                        <p class="project-meta">React / Firebase / Tailwind</p>
+                        <button class="btn inline">詳しく見る</button>
+                    </div>
+                </article>
+                <article class="project-card" data-project="project2">
+                    <div class="project-thumb">Project 2</div>
+                    <div class="project-body">
+                        <h3>学習管理ダッシュボード</h3>
+                        <p>学習の進捗を可視化するSaaS型ダッシュボード。UI設計とチャート機能を実装しました。</p>
+                        <p class="project-meta">Next.js / Supabase / Chart.js</p>
+                        <button class="btn inline">詳しく見る</button>
+                    </div>
+                </article>
+                <article class="project-card" data-project="project3">
+                    <div class="project-thumb">Project 3</div>
+                    <div class="project-body">
+                        <h3>コミュニティプラットフォーム</h3>
+                        <p>コミュニティ運営者向けのマネジメントツール。権限管理とリアルタイム通知基盤を構築しました。</p>
+                        <p class="project-meta">Vue / Node.js / WebSocket</p>
+                        <button class="btn inline">詳しく見る</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-list">
+                <div class="skill-group">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React / Next.js</li>
+                        <li>TypeScript / JavaScript</li>
+                        <li>HTML / CSS / Sass</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js / Express</li>
+                        <li>Firebase / Supabase</li>
+                        <li>REST / GraphQL API</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Figma / Storybook</li>
+                        <li>Jira / Notion</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <p>気になる点やお仕事のご相談がありましたら、以下のフォームまたはメール/SNSからお気軽にご連絡ください。</p>
+                <form class="contact-form" novalidate>
+                    <label>
+                        お名前
+                        <input type="text" name="name" required placeholder="山田 太郎" />
+                    </label>
+                    <label>
+                        メールアドレス
+                        <input type="email" name="email" required placeholder="taro@example.com" />
+                    </label>
+                    <label>
+                        メッセージ
+                        <textarea name="message" rows="4" required placeholder="お問い合わせ内容を入力してください"></textarea>
+                    </label>
+                    <button type="submit" class="btn primary">送信する</button>
+                    <p class="form-message" role="alert" aria-live="polite"></p>
+                </form>
+                <div class="contact-links">
+                    <a href="mailto:contact@example.com">contact@example.com</a>
+                    <div class="socials">
+                        <a href="#" aria-label="GitHub">GitHub</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="X">X</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Yada Magan. All rights reserved.</p>
+        <a href="#top" class="back-to-top">&#9650;</a>
+    </footer>
+
+    <div class="modal" id="project-modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" aria-label="閉じる">&times;</button>
+            <h3 id="modal-title"></h3>
+            <p class="modal-description"></p>
+            <p class="modal-tech"></p>
+            <a class="btn primary modal-link" href="#" target="_blank" rel="noopener">GitHubを見る</a>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
