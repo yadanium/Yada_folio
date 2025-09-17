@@ -31,9 +31,10 @@ const projects = {
     }
 };
 
-if (navToggle) {
+if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('is-open');
+        const isOpen = navLinks.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
     });
 }
 
@@ -56,6 +57,7 @@ navLinks?.addEventListener('click', (event) => {
     const target = event.target;
     if (target instanceof HTMLAnchorElement) {
         navLinks.classList.remove('is-open');
+        navToggle?.setAttribute('aria-expanded', 'false');
     }
 });
 
@@ -129,7 +131,8 @@ contactForm?.addEventListener('submit', (event) => {
 
 // 初期スクロール位置で nav を閉じる
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        navLinks?.classList.remove('is-open');
+    if (window.innerWidth > 768 && navLinks?.classList.contains('is-open')) {
+        navLinks.classList.remove('is-open');
+        navToggle?.setAttribute('aria-expanded', 'false');
     }
 });
